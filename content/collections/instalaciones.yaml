@@ -1,0 +1,14 @@
+title: Instalaciones
+template: instalaciones/show
+layout: layout
+revisions: false
+route: '/instalaciones/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

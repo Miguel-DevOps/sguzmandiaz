@@ -1,0 +1,90 @@
+<body >
+    <!-- Header with Hamburger Menu -->
+    <header x-data="{ isOpen: false }" class="fixed top-0 left-0 right-0 z-50 bg-white border-b">
+        <div class="container mx-auto px-4 flex justify-between items-center h-16">
+            <a href="index.html" class="text-gray-800 font-gotham tracking-wider">FUTURE IMPERFECT</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button @click="isOpen = !isOpen" class="text-gray-600 z-50">
+                <i x-show="!isOpen" data-lucide="menu" class="w-6 h-6"></i>
+                <i x-show="isOpen" data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Full Screen Navigation -->
+        <div x-show="isOpen" 
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0"
+             class="fixed inset-0 bg-white bg-opacity-95">
+            <nav class="h-full flex flex-col items-center justify-center space-y-8">
+                <a href="#" @click="isOpen = false" class="font-gotham text-2xl text-gray-800 hover:text-gray-600">LOREM</a>
+                <a href="#" @click="isOpen = false" class="font-gotham text-2xl text-gray-800 hover:text-gray-600">IPSUM</a>
+                <a href="#" @click="isOpen = false" class="font-gotham text-2xl text-gray-800 hover:text-gray-600">FEUGIAT</a>
+                <a href="#" @click="isOpen = false" class="font-gotham text-2xl text-gray-800 hover:text-gray-600">TEMPUS</a>
+                <a href="#" @click="isOpen = false" class="font-gotham text-2xl text-gray-800 hover:text-gray-600">ADIPISCING</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-24">
+        <article class="max-w-4xl mx-auto bg-white border">
+            <div class="p-8 md:p-16">
+                <!-- Article Header -->
+                <header class="relative mb-12">
+                    <div class="flex justify-end mb-4">
+                        <div class="flex items-center gap-4 font-optika text-gray-600">
+                            <span>NOVEMBER 1, 2015</span>
+                            <img src="/placeholder.svg?height=32&width=32" alt="Jane Doe" class="w-8 h-8 rounded-full">
+                            <span>JANE DOE</span>
+                        </div>
+                    </div>
+                    <h1 class="text-4xl font-gotham mb-4">MAGNA SED ADIPISCING</h1>
+                    <p class="font-optika text-gray-600 uppercase">LOREM IPSUM DOLOR AMET NULLAM CONSEQUAT ETIAM FEUGIAT</p>
+                </header>
+
+                <!-- Featured Image -->
+                <div class="mb-12">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dX44PxYTq7cK6f7vxAnWr93h3xuRxp.png" alt="Person looking at landscape" class="w-full h-auto">
+                </div>
+
+                <!-- Article Content -->
+                <div class="prose max-w-none font-optika text-gray-600 space-y-6">
+                    <p>
+                        Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                    </p>
+                    <p>
+                        Nunc quis dui scelerisque, scelerisque urna ut, dapibus orci. Sed vitae condimentum lectus, ut imperdiet quam. Maecenas in justo ut nulla aliquam sodales vel at ligula. Sed blandit diam odio, sed fringilla lectus molestie sit amet. Praesent eu tortor viverra lorem mattis pulvinar feugiat in turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                    </p>
+                </div>
+
+                <!-- Article Footer -->
+                <footer class="mt-12 pt-6 border-t">
+                    <div class="flex flex-wrap items-center justify-between gap-4 font-optika">
+                        <a href="#" class="text-gray-600 hover:text-gray-800">← Previous Post</a>
+                        <div class="flex items-center gap-6">
+                            <a href="#" class="text-gray-600 hover:text-gray-800">GENERAL</a>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="heart" class="w-4 h-4"></i>
+                                <span>28</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>128</span>
+                            </div>
+                        </div>
+                        <a href="#" class="text-gray-600 hover:text-gray-800">Next Post →</a>
+                    </div>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>

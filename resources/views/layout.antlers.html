@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="icon" type="image/webp" href="{{ asset url="/assets/logo.webp" }}">
+        <link rel="shortcut icon" type="image/webp" href="{{ asset url="/assets/logo.webp" }}">
+        <title>{{ title ?? site:name }}</title>
+        <style>
+            @font-face {
+                font-family: 'Gotham Medium';
+                src: url('/resources/css/fonts/Gotham-Medium.otf') format('otf');
+            }
+            @font-face {
+                font-family: 'Optika Medium';
+                src: url('/resources/css/fonts/Optika-Medium.ttf') format('ttf');
+            }
+            .font-gotham {
+                font-family: 'Gotham Medium', sans-serif;
+            }
+            .font-optika {
+                font-family: 'Optika Medium', serif;
+            }
+        </style>
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+    </head>
+    <body class="bg-gray-50">
+            {{ template_content }}
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script>
+                var swiper = new Swiper(".projectSwiper", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+            <style>
+                .swiper-button-next,
+                .swiper-button-prev {
+                    color: #2a1e15 !important;
+                }
+            
+                .swiper-pagination-bullet-active {
+                    background: #2a1e15 !important;
+                }
+            </style>
+    </body>
+</html>

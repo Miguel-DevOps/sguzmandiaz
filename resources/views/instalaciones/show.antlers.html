@@ -1,0 +1,121 @@
+    <!-- Header with Hamburger Menu -->
+    <header x-data="{ isOpen: false }" class="fixed top-0 left-0 right-0 z-50 bg-white border-b">
+        <div class="container mx-auto px-4 flex justify-between items-center h-16">
+            <a href="/" class="text-gray-800 font-gotham tracking-wider">INICIO</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button @click="isOpen = !isOpen" class="text-gray-600 z-50">
+                <i x-show="!isOpen" data-lucide="menu" class="w-6 h-6"></i>
+                <i x-show="isOpen" data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Full Screen Navigation -->
+        <div x-show="isOpen" 
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0"
+             class="fixed inset-0 bg-white bg-opacity-95">
+             {{nav}}
+            <nav class="h-full flex flex-col items-center justify-center space-y-8">
+                <a href="/" @click="isOpen = false" class="font-gotham text-2xl text-gray-800 hover:text-gray-600">Inicio</a>
+                <a href="{{url}}" @click="isOpen = false" class="font-gotham text-2xl text-gray-800 hover:text-gray-600">{{title}}</a>
+            </nav>
+            {{/nav}}
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-24 flex flex-col lg:flex-row gap-8">
+        <!-- Sidebar -->
+        <aside class="lg:w-80 space-y-8">
+            <div class="text-center">
+                <img src="/assets/logo.webp" alt="Logo" class="w-24 h-24 mx-auto mb-4">
+                <h1 class="text-3xl font-gotham mb-2">{{title}}</h1>
+                <p class="font-optika text-gray-600">{{descripcion_corta}}</p>
+            </div>
+
+            <!-- Mini Posts -->
+            <div class="space-y-8">
+                {{ collection:instalaciones }}
+                <article class="border bg-white">
+                    <a href="/instalaciones/{{slug}}" class="block aspect-video">
+                        {{ if imagen_destacada }}
+                            {{ glide:imagen_destacada width="300" height="200" fit="crop" }}
+                                <img src="{{ url }}" alt="{{ title }}" class="w-full h-full object-cover">
+                            {{ /glide:imagen_destacada }}
+                        {{ else }}
+                            <img src="{{ asset url="/assets/diseno-sin-titulo.webp" }}" alt="{{ title }}" class="w-full h-full object-cover">
+                        {{ /if }}
+                    </a>
+                    <div class="p-4">
+                        <h3 class="font-gotham mb-2">{{ title }}</h3>
+                        <div class="flex items-center text-sm font-optika text-gray-600">
+                            <span>{{fecha_publicacion}}</span>
+                        </div>
+                    </div>
+                </article>
+            {{ /collection:instalaciones }}
+
+                <article>
+                    <div class="p-4">
+                        <h3 class="font-optika mb-2 text-justify">{{content}}</h3>
+                    </div>
+                </article>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            {{ proyectos_relacionados }}
+            <a href="/proyectos/{{slug}}">
+            <article class="border bg-white">
+                <div class="p-8">
+                    <header class="mb-8">
+                        <h2 class="text-3xl font-gotham mb-2">{{title}}</h2>
+                        <p class="font-optika text-gray-600 uppercase mb-4">{{content}}</p>
+                    </header>
+
+                    <div class="aspect-video mb-8">
+                        {{ if imagen_destacada  }}
+                            {{ glide:imagen_destacada width="1200" height="675" fit="crop" }}
+                                <img src="{{ url }}" alt="{{ title }}" class="w-full h-full object-cover">
+                            {{ /glide:imagen_destacada }}
+                        {{ else }}
+                            <img src="{{ asset url="/assets/diseno-sin-titulo.webp" }}" alt="{{ title }}" class="w-full h-full object-cover">
+                        {{ /if }}
+                    </div>
+                    <button
+                    class="border border-gray-300 px-8 py-2 text-sm text-gray-600 hover:border-gray-400 transition-colors">
+                    Conoce Más
+                </button>
+
+                    <footer class="mt-8 pt-4 border-t flex items-center justify-between">
+                        <div class="flex items-center gap-4 font-optika">
+                            <span class="text-gray-600">{{fecha_publicacion}}</span>
+                            <img src="/assets/logo.webp" alt="Jane Doe" class="w-8 h-8 rounded-full">
+                        </div>
+                      <!--  <div class="flex items-center gap-4 font-optika">
+                            <a href="#" class="text-gray-600 hover:text-gray-800">GENERAL</a>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="heart" class="w-4 h-4"></i>
+                                <span>28</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>128</span>
+                            </div>
+                        </div>-->
+                    </footer>
+                </div>
+            </article>
+            </a>
+            {{ /proyectos_relacionados }}
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>

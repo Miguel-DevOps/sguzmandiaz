@@ -1,0 +1,64 @@
+title: Proyecto
+tabs:
+  main:
+    display: Principal
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: imagen_destacada
+            field:
+              container: assets
+              type: assets
+              display: 'Imagen Destacada'
+          -
+            handle: imagenes
+            field:
+              container: assets
+              type: assets
+              display: Imágenes
+          -
+            handle: instalacion_relacionada
+            field:
+              type: collections
+              display: 'Instalación relacionada'
+          -
+            handle: instalacion_especifica
+            field:
+              type: entries
+              display: 'Instalación Especifica'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: fecha_publicacion
+            field:
+              type: date
+              display: 'Fecha Publicación'

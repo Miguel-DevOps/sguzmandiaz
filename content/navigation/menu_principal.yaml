@@ -1,0 +1,6 @@
+title: 'Menú principal'
+collections:
+  - pages
+  - instalaciones
+  - proyectos
+max_depth: 5

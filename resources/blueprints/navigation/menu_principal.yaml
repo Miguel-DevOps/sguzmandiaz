@@ -1,0 +1,17 @@
+tabs:
+  main:
+    display: Principal
+    sections:
+      -
+        fields:
+          -
+            handle: navs
+            field:
+              max_items: 3
+              type: navs
+              display: Navs
+          -
+            handle: link
+            field:
+              type: link
+              display: Link

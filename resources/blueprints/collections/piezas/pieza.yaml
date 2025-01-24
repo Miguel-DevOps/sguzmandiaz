@@ -1,0 +1,48 @@
+title: Pieza
+tabs:
+  main:
+    display: Principal
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: galeria_de_imagenes
+            field:
+              container: assets
+              type: assets
+              display: 'Galería de Imágenes'
+          -
+            handle: proyecto_relacionado
+            field:
+              type: collections
+              display: 'Proyecto relacionado'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

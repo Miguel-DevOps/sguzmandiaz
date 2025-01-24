@@ -1,0 +1,58 @@
+title: Instalacione
+tabs:
+  main:
+    display: Principal
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: descripcion_corta
+            field:
+              type: text
+              display: 'Descripción Corta'
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: imagen_destacada
+            field:
+              container: assets
+              type: assets
+              display: 'Imagen Destacada'
+          -
+            handle: proyectos_relacionados
+            field:
+              type: entries
+              display: 'Proyectos Relacionados'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: fecha_publicacion
+            field:
+              type: date
+              display: 'Fecha Publicación'

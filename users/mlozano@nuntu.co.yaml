@@ -1,0 +1,7 @@
+name: Nuntu
+super: true
+id: 86c7904a-b6ec-4929-bef9-a65c9cc4adfe
+password_hash: $2y$12$Awe1igv3AW0Sd/p4GlLTb.57FWo3jyUpYOSTSTleBpgLFZhekDhz6
+preferences:
+  locale: es
+  favorites: {  }
