@@ -31,21 +31,38 @@ tabs:
               type: assets
               display: Imágenes
           -
-            handle: instalacion_relacionada
+            handle: videos
             field:
-              type: collections
-              display: 'Instalación relacionada'
+              type: video
+              display: Videos
           -
             handle: instalacion_especifica
             field:
               type: entries
               display: 'Instalación Especifica'
           -
-            handle: template
+            handle: textos
             field:
-              type: template
-              display: Template
-              localizable: true
+              remove_empty_nodes: false
+              type: bard
+              display: Textos
+          -
+            handle: documentos_pdf
+            field:
+              container: assets
+              type: assets
+              display: 'Documentos PDF'
+          -
+            handle: documentos_word
+            field:
+              container: assets
+              type: assets
+              display: 'Documentos Word'
+          -
+            handle: piezas
+            field:
+              type: entries
+              display: Piezas
   sidebar:
     display: Sidebar
     sections:
@@ -58,7 +75,19 @@ tabs:
               localizable: true
               validate: 'max:200'
           -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: categoria_de_contenido
+            field:
+              type: terms
+              display: 'Categoría de contenido'
+          -
             handle: fecha_publicacion
             field:
               type: date
               display: 'Fecha Publicación'
+              format: d/m/y

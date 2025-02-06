@@ -15,15 +15,8 @@
                 font-family: 'Gotham Medium';
                 src: url('/resources/css/fonts/Gotham-Medium.otf') format('otf');
             }
-            @font-face {
-                font-family: 'Optika Medium';
-                src: url('/resources/css/fonts/Optika-Medium.ttf') format('ttf');
-            }
             .font-gotham {
                 font-family: 'Gotham Medium', sans-serif;
-            }
-            .font-optika {
-                font-family: 'Optika Medium', serif;
             }
         </style>
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
@@ -54,6 +47,23 @@
             
                 .swiper-pagination-bullet-active {
                     background: #2a1e15 !important;
+                }
+                .card-container::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    border-top: 1px solid #e5e7eb;
+                    z-index: -1;
+                }
+        
+                .project-card {
+                    transition: transform 0.3s ease;
+                }
+        
+                .project-card:hover {
+                    transform: translateY(-5px);
                 }
             </style>
     </body>

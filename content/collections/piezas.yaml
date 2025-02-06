@@ -2,7 +2,7 @@ title: Piezas
 template: piezas/show
 layout: layout
 revisions: false
-route: '/instalaciones/{instalacion_slug}/{proyecto_slug}/{pieza_slug}'
+route: '/instalaciones/proyectos/{pieza}/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

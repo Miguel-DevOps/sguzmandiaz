@@ -2,30 +2,38 @@
     <!-- Header with Hamburger Menu -->
     <header x-data="{ isOpen: false }" class="fixed top-0 left-0 right-0 z-50 bg-white border-b">
         <div class="container mx-auto px-4 flex justify-between items-center h-16">
-            <a href="/" class="text-gray-800 font-gotham tracking-wider">INICIO</a>
-            
-            <!-- Hamburger Menu Button -->
-            <button @click="isOpen = !isOpen" class="text-gray-600 z-50">
-                <i x-show="!isOpen" data-lucide="menu" class="w-6 h-6"></i>
-                <i x-show="isOpen" data-lucide="x" class="w-6 h-6"></i>
-            </button>
+            <div>
+            <a href="/" class="text-gray-800 font-gotham tracking-wider text-sm">INICIO ></a>
+            <span class="text-gray-800 font-gotham tracking-wider text-sm">AUTOBIOGRAFIA</span>
         </div>
-
-        <!-- Full Screen Navigation -->
-        <div x-show="isOpen" 
-             x-transition:enter="transition ease-out duration-200"
-             x-transition:enter-start="opacity-0"
-             x-transition:enter-end="opacity-100"
-             x-transition:leave="transition ease-in duration-150"
-             x-transition:leave-start="opacity-100"
-             x-transition:leave-end="opacity-0"
-             class="fixed inset-0 bg-white bg-opacity-95">
-             {{nav}}
-            <nav class="h-full flex flex-col items-center justify-center space-y-8">
-                <a href="/" @click="isOpen = false" class="font-gotham text-2xl text-gray-800 hover:text-gray-600">Inicio</a>
-                <a href="{{url}}" @click="isOpen = false" class="font-gotham text-2xl text-gray-800 hover:text-gray-600">{{title}}</a>                
-            </nav>
-            {{/nav}}
+            <div x-data="{ isOpen: false }">
+                <button @click="isOpen = !isOpen" 
+                        class="fixed top-4 right-4 z-50 p-2 text-white bg-[#303727] rounded-md"
+                        :aria-label="isOpen ? 'Cerrar menú' : 'Abrir menú'">
+                    <i x-show="!isOpen" data-lucide="menu" class="w-6 h-6"></i>
+                    <i x-show="isOpen" data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            
+                <div x-show="isOpen" 
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="transform translate-x-full" 
+                     x-transition:enter-end="transform translate-x-0"
+                     x-transition:leave="transition ease-in duration-300" 
+                     x-transition:leave-start="transform translate-x-0"
+                     x-transition:leave-end="transform translate-x-full" 
+                     class="fixed inset-y-0 right-0 z-40 w-64 bg-[#303727] shadow-lg overflow-y-auto">
+                    {{nav}}
+                        <nav class="flex flex-col items-start justify-start h-full pt-16 px-6">
+                            <a href="/" @click="isOpen = false"
+                               class="text-white text-xl py-4 hover:text-gray-300 transition-colors font-gotham">Inicio</a>
+                            {{ nav:menu_principal }}
+                            <a href="{{url}}" @click="isOpen = false"
+                               class="text-white text-xl py-4 hover:text-gray-300 transition-colors font-gotham">{{title}}</a>
+                            {{ /nav:menu_principal}}
+                        </nav>
+                    {{/nav}}
+                </div>
+            </div>
         </div>
     </header>
 
@@ -44,7 +52,7 @@
                 </div>
 
                 <!-- Article Content -->
-                <div class="prose max-w-none font-optika text-gray-600 space-y-6">
+                <div class="prose max-w-none font-gotham text-gray-600 space-y-6">
                     <p>
                         {{content}}
                     </p>                    

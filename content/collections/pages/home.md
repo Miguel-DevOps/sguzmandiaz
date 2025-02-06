@@ -5,9 +5,9 @@ title: 'Sebastián Guzmán Díaz'
 template: pages/home
 author: 86c7904a-b6ec-4929-bef9-a65c9cc4adfe
 updated_by: 86c7904a-b6ec-4929-bef9-a65c9cc4adfe
-updated_at: 1737695307
+updated_at: 1738791453
 imagen_inicio:
-  - variaciones-de-logo/variaciones-de-logo---sebastian-guzman-diaz--03.webp
+  - logo-35.webp
 descripcion_corta: 'Artista transdisciplinar y crítico de la intersección entre naturaleza y tecnología'
 imagen_de_fondo:
   - obra.webp

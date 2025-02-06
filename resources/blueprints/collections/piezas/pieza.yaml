@@ -19,22 +19,44 @@ tabs:
               display: Content
               localizable: true
           -
+            handle: categoria_de_contenido
+            field:
+              type: terms
+              display: 'Categoría de contenido'
+          -
             handle: galeria_de_imagenes
             field:
               container: assets
               type: assets
               display: 'Galería de Imágenes'
           -
+            handle: videos
+            field:
+              type: video
+              display: Videos
+          -
+            handle: textos
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Textos
+          -
+            handle: documentos_pdf
+            field:
+              container: assets
+              type: assets
+              display: 'Documentos PDF'
+          -
+            handle: documentos_word
+            field:
+              container: assets
+              type: assets
+              display: 'Documentos Word'
+          -
             handle: proyecto_relacionado
             field:
               type: collections
               display: 'Proyecto relacionado'
-          -
-            handle: template
-            field:
-              type: template
-              display: Template
-              localizable: true
   sidebar:
     display: Sidebar
     sections:
@@ -46,3 +68,9 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true

@@ -4,10 +4,10 @@ blueprint: instalacione
 title: 'Panta rei: todo fluye, todo cambia'
 descripcion_corta: 'Heráclito expresa que todo en el universo está en constante cambio con su concepto "Panta Rei".'
 imagen_destacada:
-  - sitio-web/instalaciones-2----panta-rei/panta-rei---img-1.webp
+  - 20230419_090056.webp
 template: instalaciones/show
 updated_by: 86c7904a-b6ec-4929-bef9-a65c9cc4adfe
-updated_at: 1737688702
+updated_at: 1738868759
 fecha_publicacion: '2025-01-21'
 ---
 La frase del filósofo Heráclito de Éfeso “No bajarás dos veces por el mismo río” pone de manifiesto que el río cambia y se transforma constantemente a medida que fluye, e implícitamente sugiere que nosotros mismos, como seres cambiantes, tampoco somos la misma persona que por segunda vez vuelve al río. Para condensar este concepto, Heráclito acuñó el término “Panta Rei”, que se traduce como "todo fluye" o "todo cambia", para describir su teoría de que el universo está en constante cambio y movimiento. Todo en el universo es transitorio y no hay nada que sea permanente o inmutable.

@@ -30,16 +30,17 @@ tabs:
               type: assets
               display: 'Imagen Destacada'
           -
+            handle: videos
+            field:
+              type: video
+              display: Videos
+          -
             handle: proyectos_relacionados
             field:
               type: entries
               display: 'Proyectos Relacionados'
-          -
-            handle: template
-            field:
-              type: template
-              display: Template
-              localizable: true
+              collections:
+                - proyectos
   sidebar:
     display: Sidebar
     sections:
@@ -51,6 +52,12 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
           -
             handle: fecha_publicacion
             field:

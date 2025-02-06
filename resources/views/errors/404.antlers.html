@@ -1,1 +1,98 @@
-<p>404 Page not found.</p>
+<head>
+    <title>Error 404 - Página no encontrada</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); }
+            to { transform: translateY(0); }
+        }
+        body {
+            background-color: #f0f4f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #2c3e2c;
+        }
+        .container {
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            animation: fadeIn 0.5s ease-out, slideIn 0.5s ease-out;
+        }
+        h1 {
+            color: #4a6741;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #6b4d3c;
+            margin-bottom: 1rem;
+        }
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8b5e3c;
+        }
+        .leaves {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .leaf {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #8fbc8f;
+            opacity: 0.2;
+            border-radius: 50% 0 50% 50%;
+            animation: fall 10s linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="leaves" x-data="leaves()">
+        <template x-for="i in 10">
+            <div class="leaf" :style="`left: ${Math.random() * 100}vw; animation-delay: -${Math.random() * 10}s;`"></div>
+        </template>
+    </div>
+    <div class="container" x-data="errorPage()">
+        <h1 class="text-4xl font-bold font-gotham">Error 404 - Página no encontrada</h1>
+        <p class="text-xl font-gotham">Lo sentimos, la página que buscas no existe.</p>
+        <p class="font-gotham">
+            Serás redirigido a la página principal en 
+            <span x-text="countdown" class="countdown"></span> segundos.
+        </p>
+    </div>
+
+    <script>
+        function errorPage() {
+            return {
+                countdown: 5,
+                init() {
+                    const interval = setInterval(() => {
+                        this.countdown--;
+                        if (this.countdown <= 0) {
+                            clearInterval(interval);
+                            window.location.href = '/'; // Cambia '/' por la URL a la que quieres redirigir
+                        }
+                    }, 1000);
+                }
+            }
+        }
+
+        function leaves() {
+            return {}
+        }
+    </script>
+</body>

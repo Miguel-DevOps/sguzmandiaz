@@ -6,8 +6,7 @@ imagen_destacada:
   - sitio-web/instalaciones-1----arqueologiuas-para-despueus-del-fin-del-mundo/proyecto-1----ataxia-kosmos/home---ataxia-kosmos.webp
 template: instalaciones/show
 updated_by: 86c7904a-b6ec-4929-bef9-a65c9cc4adfe
-updated_at: 1737688691
-descripcion_corta: 'Concebimos más fácil el fin del mundo que el fin del capitalismo.'
+updated_at: 1738868797
 proyectos_relacionados:
   - 50ca95ba-82d1-4603-a7dc-e0767755667e
 fecha_publicacion: '2025-01-22'

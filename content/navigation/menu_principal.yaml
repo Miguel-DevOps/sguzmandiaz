@@ -3,4 +3,6 @@ collections:
   - pages
   - instalaciones
   - proyectos
+  - listas
+  - piezas
 max_depth: 5
