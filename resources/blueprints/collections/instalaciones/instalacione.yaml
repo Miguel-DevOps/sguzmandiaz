@@ -63,3 +63,4 @@ tabs:
             field:
               type: date
               display: 'Fecha Publicación'
+              format: Y-m-d

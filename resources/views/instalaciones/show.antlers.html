@@ -4,7 +4,7 @@
             <div>
                 <a href="/" class="text-gray-800 font-gotham tracking-wider text-sm">INICIO > </a>
                 <a href="/listas/todas-las-instalaciones"
-                    class="text-gray-800 font-gotham tracking-wider text-sm">INSTALACIÓN</a>
+                    class="text-gray-800 font-gotham tracking-wider text-sm">{{title | upper}}</a>
             </div>
 
             <div x-data="{ isOpen: false }">
@@ -63,7 +63,7 @@
                         <div class="p-4">
                             <h3 class="font-gotham mb-2">{{ title }}</h3>
                             <div class="flex items-center text-sm font-gotham text-gray-600">
-                                <span>{{ fecha_publicacion }}</span>
+                                <span>{{ fecha_publicacion | format('Y-m-d') }}</span>
                             </div>
                         </div>
                     </article>

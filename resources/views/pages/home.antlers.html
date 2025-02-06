@@ -49,14 +49,14 @@
                     <p class="text-gray-500 leading-relaxed font-gotham">{{ content }}</p>
                     <a href="/sobre-mi">
                     <button
-                        class="border border-gray-300 px-8 py-2 text-sm text-gray-600 hover:border-gray-400 transition-colors font-gotham">
+                        class="cursor-pointer border border-gray-300 px-8 py-2 text-sm text-gray-600 hover:border-gray-400 transition-colors font-gotham">
                         Conoce Más
                     </button>
                     </a>
                 </div>
 
                 <div class="space-y-8">
-                    <h2 class="text-2xl font-gotham text-gray-600">Trabajos Recientes</h2>
+                    <h2 class="text-2xl font-gotham text-gray-600">Proyectos Recientes</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                         {{ collection:instalaciones limit="4" }}
                             <div class="space-y-4">
@@ -76,7 +76,7 @@
                     </div>
                     <a href="/listas/todas-las-instalaciones">
                         <button
-                            class="border border-gray-300 px-8 py-2 text-sm text-gray-600 hover:border-gray-400 transition-colors font-gotham">
+                            class="cursor-pointer border border-gray-300 px-8 py-2 text-sm text-gray-600 hover:border-gray-400 transition-colors font-gotham">
                             Ver todos los proyectos
                         </button>
                         </a>
@@ -117,11 +117,11 @@
 
                         <div class="flex gap-4">
                             <button type="submit"
-                                class="px-8 py-2 bg-[#303727] text-white font-gotham text-sm transition-colors rounded-md">
+                                class=" cursor-pointer px-8 py-2 bg-[#303727] text-white font-gotham text-sm transition-colors rounded-md">
                                 Enviar Mensaje
                             </button>
                             <button type="reset"
-                                class="px-8 py-2 border border-gray-300 text-gray-600 font-gotham text-sm hover:border-gray-400 transition-colors rounded-md">
+                                class="cursor-pointer px-8 py-2 border border-gray-300 text-gray-600 font-gotham text-sm hover:border-gray-400 transition-colors rounded-md">
                                 Limpiar
                             </button>
                         </div>
@@ -134,7 +134,7 @@
         <!-- Menú Hamburguesa -->
         <div x-data="{ isOpen: false }">
             <button @click="isOpen = !isOpen" 
-                    class="fixed top-4 right-4 z-50 p-2 text-white bg-[#303727] rounded-md"
+                    class="cursor-pointer fixed top-4 right-4 z-50 p-2 text-white bg-[#303727] rounded-md"
                     :aria-label="isOpen ? 'Cerrar menú' : 'Abrir menú'">
                 <i x-show="!isOpen" data-lucide="menu" class="w-6 h-6"></i>
                 <i x-show="isOpen" data-lucide="x" class="w-6 h-6"></i>

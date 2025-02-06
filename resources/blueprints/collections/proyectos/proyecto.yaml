@@ -90,4 +90,4 @@ tabs:
             field:
               type: date
               display: 'Fecha Publicación'
-              format: d/m/y
+              format: Y-m-d

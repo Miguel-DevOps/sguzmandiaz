@@ -6,7 +6,7 @@ imagen_destacada:
   - ataxia-cosmos/24-11-13-sebastian-guzman-10.webp
 template: proyectos/show
 updated_by: 86c7904a-b6ec-4929-bef9-a65c9cc4adfe
-updated_at: 1738869032
+updated_at: 1738885121
 instalacion_relacionada:
   - instalaciones
 instalacion_especifica:
@@ -63,6 +63,6 @@ categoria_de_contenido:
   - 'categorias_de_contenido::documentos-pdf'
 imagen_descatacada:
   - ataxia-cosmos/24-11-13-sebastian-guzman-10.webp
-videos: 'https://vimeo.com/1053910918?share=copy'
+videos: 'https://vimeo.com/1053927834/88556587b4'
 ---
-Ataxia Kosmos, Objetos y concreto, Dimensiones variables (piezas c/u de 12 x 12 x 12 cm), 2024 - En proceso
+_Ataxia Kosmos, Objetos y concreto, Dimensiones variables (piezas c/u de 12 x 12 x 12 cm), 2024 - En proceso_

@@ -4,7 +4,7 @@
         <div class="container mx-auto px-4 flex justify-between items-center h-16">
             <div>
                 <a href="/" class="text-gray-800 font-gotham tracking-wider text-sm">INICIO ></a>
-                <span href="/" class="text-gray-800 font-gotham tracking-wider text-sm">TODAS LAS INSTALACIONES</span>
+                <span href="/" class="text-gray-800 font-gotham tracking-wider text-sm">TODOS LOS PROYECTOS</span>
             </div>
             <div x-data="{ isOpen: false }">
                 <button @click="isOpen = !isOpen"
@@ -51,7 +51,7 @@
                     {{ /if }}
                     <h2 class="text-xl font-gotham mb-2">{{ title }}</h2>
                     <p class="text-gray-600 font-gotham mb-4">{{ summary }}</p>
-                    <a href="{{ url }}" class="text-[#303727] font-gotham">Ver Instalación</a>
+                    <a href="{{ url }}" class="text-[#303727] font-gotham">Ver Proyecto</a>
                 </div>
             {{ /collection:instalaciones }}
         </div>
