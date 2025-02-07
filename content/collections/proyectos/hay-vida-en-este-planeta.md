@@ -1,7 +1,7 @@
 ---
 id: 8bdd0f6b-ea25-44f5-b7a3-62eac0066339
 blueprint: proyecto
-title: '¿hay vida en este planeta?'
+title: '¿Hay vida en este planeta?'
 imagen_destacada:
   - 'PROYECTO 6 ARQUEOLOGIAS/2024 — 3 — hay vida en este planeta/20240206_165332.webp'
 imagenes:
@@ -43,6 +43,6 @@ textos:
         text: 'Es un esfuerzo por ver alternativas a la forma en que vivimos ahora, un intento de ver a través de nuestra sociedad afligida por el miedo y sus tecnologías obsesivas otras formas de ser, e incluso imaginar motivos reales para la esperanza. '
 template: proyectos/show
 updated_by: 86c7904a-b6ec-4929-bef9-a65c9cc4adfe
-updated_at: 1738898809
+updated_at: 1738933815
 ---
 _Concreto, arena, carbón, sal, barro, resina y piedra 55 x 7 x 7cm (6 piezas de  5 x 7 x 5 cm) 2024_
