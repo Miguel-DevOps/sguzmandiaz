@@ -3,13 +3,16 @@ id: 4b03fe49-9cf0-47e0-a942-27abe37adf4a
 blueprint: instalacione
 title: 'Arqueologías para después del fin del mundo'
 imagen_destacada:
-  - 'PROYECTO 6 ARQUEOLOGIAS/proyecto-1----ataxia-kosmos/home---ataxia-kosmos.webp'
+  - 'PROYECTO 6 ARQUEOLOGIAS/2024 — 1 — Ataxia Cosmos/24-11-13-sebastian-guzman-1.webp'
 template: instalaciones/show
 updated_by: 86c7904a-b6ec-4929-bef9-a65c9cc4adfe
-updated_at: 1738885519
+updated_at: 1738897987
 proyectos_relacionados:
   - 50ca95ba-82d1-4603-a7dc-e0767755667e
-fecha_publicacion: '2025-01-15'
+  - b774c218-be20-4843-9559-cd3a41909b6a
+  - 8bdd0f6b-ea25-44f5-b7a3-62eac0066339
+fecha_publicacion: '2024-01-01'
+descripcion_corta: 'Concebimos más fácil el fin del mundo que el fin del capitalismo.'
 ---
 Concebimos más fácil el fin del mundo que el fin del capitalismo. Hoy nos resulta más sencillo imaginar el total deterioro de la Tierra y de la naturaleza que el derrumbe del sistema capitalista. Ante la imposibilidad de ver una alternativa diferente a este modo de vida y sistema socioeconómico en que nos encontramos, solo nos queda el viejo y conocido eslogan de Margaret Thatcher: “No hay alternativa”, que sitúa a las doctrinas del norte planetario del liberalismo económico y el libre mercado como el único modo para el desarrollo de las sociedades modernas.
 
