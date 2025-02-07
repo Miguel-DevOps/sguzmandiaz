@@ -1,0 +1,11 @@
+simple_popup: false
+cookie_lifetime: 20
+necessary: null
+enable_analytics: true
+enable_analytics_default: true
+analytics: null
+enable_advertising: false
+enable_advertising_default: false
+advertising: null
+enable_google: true
+google_tag_id: GTM-5FXS7L2J

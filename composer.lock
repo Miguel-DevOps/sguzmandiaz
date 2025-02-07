@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5cefc55c1f250b4b4149a9d8499c0fc0",
+    "content-hash": "a33ff17c89346c0c1d0abf01eb2010aa",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -68,6 +68,48 @@
                 "source": "https://github.com/ajthinking/archetype/tree/v2.0.0"
             },
             "time": "2024-05-11T08:05:58+00:00"
+        },
+        {
+            "name": "alt-design/alt-cookies",
+            "version": "v1.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alt-design/Alt-Cookies-Addon.git",
+                "reference": "9cd71bc2259d8a2780c993eb30edec7c4b8fbfe0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alt-design/Alt-Cookies-Addon/zipball/9cd71bc2259d8a2780c993eb30edec7c4b8fbfe0",
+                "reference": "9cd71bc2259d8a2780c993eb30edec7c4b8fbfe0",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AltDesign\\AltCookiesAddon\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Alt Cookies",
+                    "description": "Alt Cookies"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AltDesign\\AltCookiesAddon\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Helps handle scripts and cookies on your Statamic site",
+            "support": {
+                "issues": "https://github.com/alt-design/Alt-Cookies-Addon/issues",
+                "source": "https://github.com/alt-design/Alt-Cookies-Addon/tree/v1.1.7"
+            },
+            "time": "2024-09-17T13:24:10+00:00"
         },
         {
             "name": "brick/math",
